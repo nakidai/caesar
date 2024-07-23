@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     scanf("%ms", &source);
     if (source == NULL)
     {
-        perror("scanf: ");
+        perror("scanf()");
         exit(1);
     }
 
