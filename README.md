@@ -10,6 +10,6 @@ shown in stdout.
 Example
 --
 ```
-$ echo "helloworld" | python main.py encrypt 123abc
+$ echo "helloworld" | python main.py encode 123abc
 jgnnqyqtnf
 ```
