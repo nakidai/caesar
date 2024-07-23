@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdnoreturn.h>
@@ -20,7 +21,7 @@ int main(int argc, char **argv)
     char *alphabet = getenv("CAESAR_ALPHABET");
     if (alphabet == NULL) alphabet = DEFAULT_ALPHABET;
 
-    int key = 0;
+    int32_t key = 0;
     for (char *cp = argv[2]; *cp != '\0'; ++cp) key += *cp;
     key %= strlen(alphabet);
     if (!strcmp(argv[1], "decode"))
