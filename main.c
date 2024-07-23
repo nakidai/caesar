@@ -28,15 +28,7 @@ int main(int argc, char **argv)
     else if (strcmp(argv[1], "encode"))
         usage(argv[0]);
 
-    char *source;
-    scanf("%ms", &source);
-    if (source == NULL)
-    {
-        perror("scanf()");
-        exit(1);
-    }
-
-    for (char *cp = source; *cp != '\0'; ++cp)
-        putchar(*cp + key);
+    for (char ch = getchar(); ch != '\0' && ch != '\n'; ch = getchar())
+        putchar(ch + key);
     putchar('\n');
 }
